@@ -1,8 +1,8 @@
 package manager;
 
-import service.InFile.FileBackedTasksManager;
+import service.inFile.FileBackedTasksManager;
 import service.interfaces.HistoryManager;
-import service.InMemory.InMemoryHistoryManager;
+import service.inMemory.InMemoryHistoryManager;
 import service.interfaces.TaskManager;
 
 import java.io.File;

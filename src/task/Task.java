@@ -7,18 +7,24 @@ import java.util.Objects;
 
 public class Task {
     protected int id;
+    protected TaskType type;
     protected String name;
     protected TaskStatus status;
     protected String description;
 
-    public Task(String name, TaskStatus status, String description) {
+    public Task(String name, TaskType type, TaskStatus status, String description) {
         this.name = name;
+        this.type = type;
         this.status = status;
         this.description = description;
     }
 
     public int getId() {
         return id;
+    }
+
+    public TaskType getType() {
+        return type;
     }
 
     public void setId(int id) {
@@ -51,14 +57,12 @@ public class Task {
 
     @Override
     public String toString() {
-        return String.format(
-                "%s,%s,%s,%s,%s,%s\n",
-                getId(),
-                TaskType.TASK,
-                getName(),
-                getStatus(),
-                getDescription(),
-                null);
+        return "Task{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", status=" + status +
+                ", description='" + description + '\'' +
+                '}';
     }
 
     @Override
@@ -73,4 +77,5 @@ public class Task {
     public int hashCode() {
         return Objects.hash(id, name, status, description);
     }
+
 }

@@ -9,8 +9,8 @@ import java.util.Objects;
 public class SubTask extends Task {
     private int epicId;
 
-    public SubTask(String name, TaskStatus status, String description, int epicId) {
-        super(name, status, description);
+    public SubTask(String name, TaskType type, TaskStatus status, String description, int epicId) {
+        super(name, type, status, description);
         this.epicId = epicId;
     }
 
@@ -38,13 +38,13 @@ public class SubTask extends Task {
 
     @Override
     public String toString() {
-        return String.format(
-                "%s,%s,%s,%s,%s,%s\n",
-                getId(),
-                TaskType.SUB_TASK,
-                getName(),
-                getStatus(),
-                getDescription(),
-                getEpicId());
+        return "SubTask{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", type=" + type +
+                ", status=" + status +
+                ", description='" + description + '\'' +
+                ", epicId=" + epicId +
+                '}';
     }
 }

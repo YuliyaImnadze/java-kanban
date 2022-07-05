@@ -1,4 +1,4 @@
-package service.InMemory;
+package service.inMemory;
 
 import manager.Managers;
 import service.interfaces.HistoryManager;
@@ -203,7 +203,7 @@ public class InMemoryTaskManager implements TaskManager {
         }
     }
 
-    public HistoryManager getHistoryManager() {
+    protected HistoryManager getHistoryManager() {
         return historyManager;
     }
 

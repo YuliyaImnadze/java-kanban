@@ -1,4 +1,4 @@
-package service.InMemory;
+package service.inMemory;
 
 import service.interfaces.HistoryManager;
 import task.Task;
@@ -10,8 +10,6 @@ import java.util.Map;
 
 public class InMemoryHistoryManager implements HistoryManager {
 
-
-    private List<Task> listHistory = new ArrayList<>();
     private final Map<Integer, Node> customLinkedList = new HashMap<>(); // новый хэшмэп
 
     private Node first;
@@ -78,8 +76,7 @@ public class InMemoryHistoryManager implements HistoryManager {
 
     @Override
     public List<Task> getHistory() {
-        listHistory = getTasks();
-        return listHistory;
+        return getTasks();
     }
 
     public void remove(int id) {

@@ -3,7 +3,7 @@ id,type,name,status,description,epic
 2,TASK,Таск 2,DONE,Купить еды,null
 3,TASK,Таск 3,NEW,Купить еды,null
 4,TASK,Таск 4,NEW,Купить еды,null
-5,EPIC,Эпик 1,NEW,Покупка квартиры,5
-6,EPIC,Эпик 2,NEW,Продажа дачи,6
+5,EPIC,Эпик 1,NEW,Покупка квартиры,null
+6,EPIC,Эпик 2,NEW,Продажа дачи,null
 
-2,1,4,3
+2,3,4,1,

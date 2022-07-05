@@ -11,8 +11,8 @@ import java.util.Objects;
 public class Epic extends Task {
     private final List<Integer> subTaskIDs = new ArrayList<>();
 
-    public Epic(String name, TaskStatus status, String description) {
-        super(name, status, description);
+    public Epic(String name, TaskType type, TaskStatus status, String description) {
+        super(name, type, status, description);
     }
 
     public void addSubTaskID(SubTask subTask) {
@@ -43,13 +43,12 @@ public class Epic extends Task {
 
     @Override
     public String toString() {
-        return String.format(
-                "%s,%s,%s,%s,%s,%s\n",
-                getId(),
-                TaskType.EPIC,
-                getName(),
-                getStatus(),
-                getDescription(),
-                getId());
+        return "Epic{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", status=" + status +
+                ", description='" + description + '\'' +
+                ", subTaskIDs=" + subTaskIDs +
+                '}';
     }
 }
